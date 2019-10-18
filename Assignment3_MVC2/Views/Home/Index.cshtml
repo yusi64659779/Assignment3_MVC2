@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Agricultural Products</h1>
+    <p class="lead">In this website, you will get the price details of fruits and vegetables</p>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Fruits</h2><br />
+        <h3><img src="~/Images/Fruits.gif" HEIGHT=200 WIDTH=350 /></h3><br />
+        @Html.ActionLink("Types of Fruits", "Index", "Fruits")
+    </div>
+    <div class="col-md-4">
+        <h2>Vegetables</h2><br />
+        <h3><img src="~/Images/Vegetables.gif" HEIGHT=200 WIDTH=300 /></h3><br />
+        @Html.ActionLink("Types of Vegetables", "Index", "Vegetables")
+    </div>
+</div>

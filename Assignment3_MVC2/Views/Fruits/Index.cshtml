@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Assignment3_MVC2.Models.Fruit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fruit_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Agri_Products.Product_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fruit_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Agri_Products.Product_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Fruit_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Fruit_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Fruit_ID })
+        </td>
+    </tr>
+}
+
+</table>

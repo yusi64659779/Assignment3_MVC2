@@ -1,0 +1,34 @@
+﻿@model Assignment3_MVC2.Models.Vegetable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vegetable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Veg_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Veg_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Agri_Products.Product_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agri_Products.Product_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Veg_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

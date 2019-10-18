@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Agriculture_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agri_Products">
+          <Key>
+            <PropertyRef Name="Product_ID" />
+          </Key>
+          <Property Name="Product_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Apple">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="int" Nullable="false" />
+          <Property Name="Fruit_ID" Type="int" Nullable="false" />
+          <Property Name="Form" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Retail_Price_Dollars" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Preparation_yield_Factor" Type="decimal" Precision="2" Scale="1" />
+          <Property Name="Size_Cup_Equivalent" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="Apricot">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="int" Nullable="false" />
+          <Property Name="Fruit_ID" Type="int" Nullable="false" />
+          <Property Name="Form" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Retail_Price_Dollars" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Preparation_yield_Factor" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Size_Cup_Equivalent" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="Blueberry">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="int" Nullable="false" />
+          <Property Name="Fruit_ID" Type="int" Nullable="false" />
+          <Property Name="Form" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Retail_Price_Dollars" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Preparation_yield_Factor" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Size_Cup_Equivalent" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="Fruits">
+          <Key>
+            <PropertyRef Name="Fruit_ID" />
+          </Key>
+          <Property Name="Fruit_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product_ID" Type="int" Nullable="false" />
+          <Property Name="Fruit_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mushroom">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="int" Nullable="false" />
+          <Property Name="Veg_ID" Type="int" Nullable="false" />
+          <Property Name="Form" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Retail_Price_Dollars" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Preparation_yield_Factor" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Size_Cup_Equivalent" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="Potato">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="int" Nullable="false" />
+          <Property Name="Veg_ID" Type="int" Nullable="false" />
+          <Property Name="Form" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Retail_Price_Dollars" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Preparation_yield_Factor" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Cup_Equivalent" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="Tomato">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="int" Nullable="false" />
+          <Property Name="Veg_ID" Type="int" Nullable="false" />
+          <Property Name="Form" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Retail_Price_Dollars" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Preparation_yield_Factor" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Size_Cup_Equivalent" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="varchar" MaxLength="50" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="Vegetables">
+          <Key>
+            <PropertyRef Name="Veg_ID" />
+          </Key>
+          <Property Name="Veg_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product_ID" Type="int" Nullable="false" />
+          <Property Name="Veg_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_Apple_dbo_Fruits_Fruit_ID">
+          <End Role="Fruits" Type="Self.Fruits" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Apple" Type="Self.Apple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fruits">
+              <PropertyRef Name="Fruit_ID" />
+            </Principal>
+            <Dependent Role="Apple">
+              <PropertyRef Name="Fruit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Apricot_dbo_Fruits_Fruit_ID">
+          <End Role="Fruits" Type="Self.Fruits" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Apricot" Type="Self.Apricot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fruits">
+              <PropertyRef Name="Fruit_ID" />
+            </Principal>
+            <Dependent Role="Apricot">
+              <PropertyRef Name="Fruit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Blueberry_dbo_Fruits_Fruit_ID">
+          <End Role="Fruits" Type="Self.Fruits" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Blueberry" Type="Self.Blueberry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fruits">
+              <PropertyRef Name="Fruit_ID" />
+            </Principal>
+            <Dependent Role="Blueberry">
+              <PropertyRef Name="Fruit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Fruits_dbo_Agri_Products_Product_ID">
+          <End Role="Agri_Products" Type="Self.Agri_Products" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Fruits" Type="Self.Fruits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agri_Products">
+              <PropertyRef Name="Product_ID" />
+            </Principal>
+            <Dependent Role="Fruits">
+              <PropertyRef Name="Product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Mushroom_dbo_Vegetables_Veg_ID">
+          <End Role="Vegetables" Type="Self.Vegetables" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Mushroom" Type="Self.Mushroom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vegetables">
+              <PropertyRef Name="Veg_ID" />
+            </Principal>
+            <Dependent Role="Mushroom">
+              <PropertyRef Name="Veg_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Potato_dbo_Vegetables_Veg_ID">
+          <End Role="Vegetables" Type="Self.Vegetables" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Potato" Type="Self.Potato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vegetables">
+              <PropertyRef Name="Veg_ID" />
+            </Principal>
+            <Dependent Role="Potato">
+              <PropertyRef Name="Veg_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tomato_dbo_Vegetables_Veg_ID">
+          <End Role="Vegetables" Type="Self.Vegetables" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tomato" Type="Self.Tomato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vegetables">
+              <PropertyRef Name="Veg_ID" />
+            </Principal>
+            <Dependent Role="Tomato">
+              <PropertyRef Name="Veg_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Vegetables_dbo_Agri_Products_Product_ID">
+          <End Role="Agri_Products" Type="Self.Agri_Products" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Vegetables" Type="Self.Vegetables" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agri_Products">
+              <PropertyRef Name="Product_ID" />
+            </Principal>
+            <Dependent Role="Vegetables">
+              <PropertyRef Name="Product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Agriculture_DatabaseModelStoreContainer">
+          <EntitySet Name="Agri_Products" EntityType="Self.Agri_Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apple" EntityType="Self.Apple" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apricot" EntityType="Self.Apricot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blueberry" EntityType="Self.Blueberry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fruits" EntityType="Self.Fruits" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mushroom" EntityType="Self.Mushroom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Potato" EntityType="Self.Potato" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tomato" EntityType="Self.Tomato" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vegetables" EntityType="Self.Vegetables" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_Apple_dbo_Fruits_Fruit_ID" Association="Self.FK_dbo_Apple_dbo_Fruits_Fruit_ID">
+            <End Role="Fruits" EntitySet="Fruits" />
+            <End Role="Apple" EntitySet="Apple" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Apricot_dbo_Fruits_Fruit_ID" Association="Self.FK_dbo_Apricot_dbo_Fruits_Fruit_ID">
+            <End Role="Fruits" EntitySet="Fruits" />
+            <End Role="Apricot" EntitySet="Apricot" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Blueberry_dbo_Fruits_Fruit_ID" Association="Self.FK_dbo_Blueberry_dbo_Fruits_Fruit_ID">
+            <End Role="Fruits" EntitySet="Fruits" />
+            <End Role="Blueberry" EntitySet="Blueberry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Fruits_dbo_Agri_Products_Product_ID" Association="Self.FK_dbo_Fruits_dbo_Agri_Products_Product_ID">
+            <End Role="Agri_Products" EntitySet="Agri_Products" />
+            <End Role="Fruits" EntitySet="Fruits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Mushroom_dbo_Vegetables_Veg_ID" Association="Self.FK_dbo_Mushroom_dbo_Vegetables_Veg_ID">
+            <End Role="Vegetables" EntitySet="Vegetables" />
+            <End Role="Mushroom" EntitySet="Mushroom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Potato_dbo_Vegetables_Veg_ID" Association="Self.FK_dbo_Potato_dbo_Vegetables_Veg_ID">
+            <End Role="Vegetables" EntitySet="Vegetables" />
+            <End Role="Potato" EntitySet="Potato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tomato_dbo_Vegetables_Veg_ID" Association="Self.FK_dbo_tomato_dbo_Vegetables_Veg_ID">
+            <End Role="Vegetables" EntitySet="Vegetables" />
+            <End Role="Tomato" EntitySet="Tomato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Vegetables_dbo_Agri_Products_Product_ID" Association="Self.FK_dbo_Vegetables_dbo_Agri_Products_Product_ID">
+            <End Role="Agri_Products" EntitySet="Agri_Products" />
+            <End Role="Vegetables" EntitySet="Vegetables" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Agriculture_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Agri_Products">
+          <Key>
+            <PropertyRef Name="Product_ID" />
+          </Key>
+          <Property Name="Product_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Fruits" Relationship="Self.FK_dbo_Fruits_dbo_Agri_Products_Product_ID" FromRole="Agri_Products" ToRole="Fruits" />
+          <NavigationProperty Name="Vegetables" Relationship="Self.FK_dbo_Vegetables_dbo_Agri_Products_Product_ID" FromRole="Agri_Products" ToRole="Vegetables" />
+        </EntityType>
+        <EntityType Name="Apple">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="Int32" Nullable="false" />
+          <Property Name="Fruit_ID" Type="Int32" Nullable="false" />
+          <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Retail_Price_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Preparation_yield_Factor" Type="Decimal" Precision="2" Scale="1" />
+          <Property Name="Size_Cup_Equivalent" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <NavigationProperty Name="Fruit" Relationship="Self.FK_dbo_Apple_dbo_Fruits_Fruit_ID" FromRole="Apple" ToRole="Fruits" />
+        </EntityType>
+        <EntityType Name="Apricot">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="Int32" Nullable="false" />
+          <Property Name="Fruit_ID" Type="Int32" Nullable="false" />
+          <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Retail_Price_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Preparation_yield_Factor" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Size_Cup_Equivalent" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <NavigationProperty Name="Fruit" Relationship="Self.FK_dbo_Apricot_dbo_Fruits_Fruit_ID" FromRole="Apricot" ToRole="Fruits" />
+        </EntityType>
+        <EntityType Name="Blueberry">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="Int32" Nullable="false" />
+          <Property Name="Fruit_ID" Type="Int32" Nullable="false" />
+          <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Retail_Price_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Preparation_yield_Factor" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Size_Cup_Equivalent" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <NavigationProperty Name="Fruit" Relationship="Self.FK_dbo_Blueberry_dbo_Fruits_Fruit_ID" FromRole="Blueberry" ToRole="Fruits" />
+        </EntityType>
+        <EntityType Name="Fruit">
+          <Key>
+            <PropertyRef Name="Fruit_ID" />
+          </Key>
+          <Property Name="Fruit_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" />
+          <Property Name="Fruit_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Agri_Products" Relationship="Self.FK_dbo_Fruits_dbo_Agri_Products_Product_ID" FromRole="Fruits" ToRole="Agri_Products" />
+          <NavigationProperty Name="Apples" Relationship="Self.FK_dbo_Apple_dbo_Fruits_Fruit_ID" FromRole="Fruits" ToRole="Apple" />
+          <NavigationProperty Name="Apricots" Relationship="Self.FK_dbo_Apricot_dbo_Fruits_Fruit_ID" FromRole="Fruits" ToRole="Apricot" />
+          <NavigationProperty Name="Blueberries" Relationship="Self.FK_dbo_Blueberry_dbo_Fruits_Fruit_ID" FromRole="Fruits" ToRole="Blueberry" />
+        </EntityType>
+        <EntityType Name="Mushroom">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="Int32" Nullable="false" />
+          <Property Name="Veg_ID" Type="Int32" Nullable="false" />
+          <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Retail_Price_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Preparation_yield_Factor" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Size_Cup_Equivalent" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <NavigationProperty Name="Vegetable" Relationship="Self.FK_dbo_Mushroom_dbo_Vegetables_Veg_ID" FromRole="Mushroom" ToRole="Vegetables" />
+        </EntityType>
+        <EntityType Name="Potato">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="Int32" Nullable="false" />
+          <Property Name="Veg_ID" Type="Int32" Nullable="false" />
+          <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Retail_Price_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Preparation_yield_Factor" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Cup_Equivalent" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <NavigationProperty Name="Vegetable" Relationship="Self.FK_dbo_Potato_dbo_Vegetables_Veg_ID" FromRole="Potato" ToRole="Vegetables" />
+        </EntityType>
+        <EntityType Name="Tomato">
+          <Key>
+            <PropertyRef Name="Form_ID" />
+          </Key>
+          <Property Name="Form_ID" Type="Int32" Nullable="false" />
+          <Property Name="Veg_ID" Type="Int32" Nullable="false" />
+          <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Retail_Price_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Price_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Preparation_yield_Factor" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Size_Cup_Equivalent" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="Size_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Average_Price_Per_Cup_Dollars" Type="Decimal" Precision="3" Scale="2" />
+          <NavigationProperty Name="Vegetable" Relationship="Self.FK_dbo_tomato_dbo_Vegetables_Veg_ID" FromRole="Tomato" ToRole="Vegetables" />
+        </EntityType>
+        <EntityType Name="Vegetable">
+          <Key>
+            <PropertyRef Name="Veg_ID" />
+          </Key>
+          <Property Name="Veg_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" />
+          <Property Name="Veg_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Agri_Products" Relationship="Self.FK_dbo_Vegetables_dbo_Agri_Products_Product_ID" FromRole="Vegetables" ToRole="Agri_Products" />
+          <NavigationProperty Name="Mushrooms" Relationship="Self.FK_dbo_Mushroom_dbo_Vegetables_Veg_ID" FromRole="Vegetables" ToRole="Mushroom" />
+          <NavigationProperty Name="Potatoes" Relationship="Self.FK_dbo_Potato_dbo_Vegetables_Veg_ID" FromRole="Vegetables" ToRole="Potato" />
+          <NavigationProperty Name="Tomatoes" Relationship="Self.FK_dbo_tomato_dbo_Vegetables_Veg_ID" FromRole="Vegetables" ToRole="Tomato" />
+        </EntityType>
+        <Association Name="FK_dbo_Fruits_dbo_Agri_Products_Product_ID">
+          <End Role="Agri_Products" Type="Self.Agri_Products" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Fruits" Type="Self.Fruit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agri_Products">
+              <PropertyRef Name="Product_ID" />
+            </Principal>
+            <Dependent Role="Fruits">
+              <PropertyRef Name="Product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Vegetables_dbo_Agri_Products_Product_ID">
+          <End Role="Agri_Products" Type="Self.Agri_Products" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Vegetables" Type="Self.Vegetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Agri_Products">
+              <PropertyRef Name="Product_ID" />
+            </Principal>
+            <Dependent Role="Vegetables">
+              <PropertyRef Name="Product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Apple_dbo_Fruits_Fruit_ID">
+          <End Role="Fruits" Type="Self.Fruit" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Apple" Type="Self.Apple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fruits">
+              <PropertyRef Name="Fruit_ID" />
+            </Principal>
+            <Dependent Role="Apple">
+              <PropertyRef Name="Fruit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Apricot_dbo_Fruits_Fruit_ID">
+          <End Role="Fruits" Type="Self.Fruit" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Apricot" Type="Self.Apricot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fruits">
+              <PropertyRef Name="Fruit_ID" />
+            </Principal>
+            <Dependent Role="Apricot">
+              <PropertyRef Name="Fruit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Blueberry_dbo_Fruits_Fruit_ID">
+          <End Role="Fruits" Type="Self.Fruit" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Blueberry" Type="Self.Blueberry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fruits">
+              <PropertyRef Name="Fruit_ID" />
+            </Principal>
+            <Dependent Role="Blueberry">
+              <PropertyRef Name="Fruit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Mushroom_dbo_Vegetables_Veg_ID">
+          <End Role="Vegetables" Type="Self.Vegetable" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Mushroom" Type="Self.Mushroom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vegetables">
+              <PropertyRef Name="Veg_ID" />
+            </Principal>
+            <Dependent Role="Mushroom">
+              <PropertyRef Name="Veg_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Potato_dbo_Vegetables_Veg_ID">
+          <End Role="Vegetables" Type="Self.Vegetable" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Potato" Type="Self.Potato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vegetables">
+              <PropertyRef Name="Veg_ID" />
+            </Principal>
+            <Dependent Role="Potato">
+              <PropertyRef Name="Veg_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tomato_dbo_Vegetables_Veg_ID">
+          <End Role="Vegetables" Type="Self.Vegetable" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tomato" Type="Self.Tomato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vegetables">
+              <PropertyRef Name="Veg_ID" />
+            </Principal>
+            <Dependent Role="Tomato">
+              <PropertyRef Name="Veg_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Agriculture_DatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agri_Products" EntityType="Self.Agri_Products" />
+          <EntitySet Name="Apples" EntityType="Self.Apple" />
+          <EntitySet Name="Apricots" EntityType="Self.Apricot" />
+          <EntitySet Name="Blueberries" EntityType="Self.Blueberry" />
+          <EntitySet Name="Fruits" EntityType="Self.Fruit" />
+          <EntitySet Name="Mushrooms" EntityType="Self.Mushroom" />
+          <EntitySet Name="Potatoes" EntityType="Self.Potato" />
+          <EntitySet Name="Tomatoes" EntityType="Self.Tomato" />
+          <EntitySet Name="Vegetables" EntityType="Self.Vegetable" />
+          <AssociationSet Name="FK_dbo_Fruits_dbo_Agri_Products_Product_ID" Association="Self.FK_dbo_Fruits_dbo_Agri_Products_Product_ID">
+            <End Role="Agri_Products" EntitySet="Agri_Products" />
+            <End Role="Fruits" EntitySet="Fruits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Vegetables_dbo_Agri_Products_Product_ID" Association="Self.FK_dbo_Vegetables_dbo_Agri_Products_Product_ID">
+            <End Role="Agri_Products" EntitySet="Agri_Products" />
+            <End Role="Vegetables" EntitySet="Vegetables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Apple_dbo_Fruits_Fruit_ID" Association="Self.FK_dbo_Apple_dbo_Fruits_Fruit_ID">
+            <End Role="Fruits" EntitySet="Fruits" />
+            <End Role="Apple" EntitySet="Apples" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Apricot_dbo_Fruits_Fruit_ID" Association="Self.FK_dbo_Apricot_dbo_Fruits_Fruit_ID">
+            <End Role="Fruits" EntitySet="Fruits" />
+            <End Role="Apricot" EntitySet="Apricots" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Blueberry_dbo_Fruits_Fruit_ID" Association="Self.FK_dbo_Blueberry_dbo_Fruits_Fruit_ID">
+            <End Role="Fruits" EntitySet="Fruits" />
+            <End Role="Blueberry" EntitySet="Blueberries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Mushroom_dbo_Vegetables_Veg_ID" Association="Self.FK_dbo_Mushroom_dbo_Vegetables_Veg_ID">
+            <End Role="Vegetables" EntitySet="Vegetables" />
+            <End Role="Mushroom" EntitySet="Mushrooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Potato_dbo_Vegetables_Veg_ID" Association="Self.FK_dbo_Potato_dbo_Vegetables_Veg_ID">
+            <End Role="Vegetables" EntitySet="Vegetables" />
+            <End Role="Potato" EntitySet="Potatoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tomato_dbo_Vegetables_Veg_ID" Association="Self.FK_dbo_tomato_dbo_Vegetables_Veg_ID">
+            <End Role="Vegetables" EntitySet="Vegetables" />
+            <End Role="Tomato" EntitySet="Tomatoes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Agriculture_DatabaseModelStoreContainer" CdmEntityContainer="Agriculture_DatabaseEntities">
+          <EntitySetMapping Name="Agri_Products">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Agri_Products">
+              <MappingFragment StoreEntitySet="Agri_Products">
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apples">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Apple">
+              <MappingFragment StoreEntitySet="Apple">
+                <ScalarProperty Name="Form_ID" ColumnName="Form_ID" />
+                <ScalarProperty Name="Fruit_ID" ColumnName="Fruit_ID" />
+                <ScalarProperty Name="Form" ColumnName="Form" />
+                <ScalarProperty Name="Average_Retail_Price_Dollars" ColumnName="Average_Retail_Price_Dollars" />
+                <ScalarProperty Name="Price_Unit" ColumnName="Price_Unit" />
+                <ScalarProperty Name="Preparation_yield_Factor" ColumnName="Preparation_yield_Factor" />
+                <ScalarProperty Name="Size_Cup_Equivalent" ColumnName="Size_Cup_Equivalent" />
+                <ScalarProperty Name="Size_Unit" ColumnName="Size_Unit" />
+                <ScalarProperty Name="Average_Price_Per_Cup_Dollars" ColumnName="Average_Price_Per_Cup_Dollars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apricots">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Apricot">
+              <MappingFragment StoreEntitySet="Apricot">
+                <ScalarProperty Name="Form_ID" ColumnName="Form_ID" />
+                <ScalarProperty Name="Fruit_ID" ColumnName="Fruit_ID" />
+                <ScalarProperty Name="Form" ColumnName="Form" />
+                <ScalarProperty Name="Average_Retail_Price_Dollars" ColumnName="Average_Retail_Price_Dollars" />
+                <ScalarProperty Name="Price_Unit" ColumnName="Price_Unit" />
+                <ScalarProperty Name="Preparation_yield_Factor" ColumnName="Preparation_yield_Factor" />
+                <ScalarProperty Name="Size_Cup_Equivalent" ColumnName="Size_Cup_Equivalent" />
+                <ScalarProperty Name="Size_Unit" ColumnName="Size_Unit" />
+                <ScalarProperty Name="Average_Price_Per_Cup_Dollars" ColumnName="Average_Price_Per_Cup_Dollars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blueberries">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Blueberry">
+              <MappingFragment StoreEntitySet="Blueberry">
+                <ScalarProperty Name="Form_ID" ColumnName="Form_ID" />
+                <ScalarProperty Name="Fruit_ID" ColumnName="Fruit_ID" />
+                <ScalarProperty Name="Form" ColumnName="Form" />
+                <ScalarProperty Name="Average_Retail_Price_Dollars" ColumnName="Average_Retail_Price_Dollars" />
+                <ScalarProperty Name="Price_Unit" ColumnName="Price_Unit" />
+                <ScalarProperty Name="Preparation_yield_Factor" ColumnName="Preparation_yield_Factor" />
+                <ScalarProperty Name="Size_Cup_Equivalent" ColumnName="Size_Cup_Equivalent" />
+                <ScalarProperty Name="Size_Unit" ColumnName="Size_Unit" />
+                <ScalarProperty Name="Average_Price_Per_Cup_Dollars" ColumnName="Average_Price_Per_Cup_Dollars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fruits">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Fruit">
+              <MappingFragment StoreEntitySet="Fruits">
+                <ScalarProperty Name="Fruit_ID" ColumnName="Fruit_ID" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Fruit_Name" ColumnName="Fruit_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mushrooms">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Mushroom">
+              <MappingFragment StoreEntitySet="Mushroom">
+                <ScalarProperty Name="Form_ID" ColumnName="Form_ID" />
+                <ScalarProperty Name="Veg_ID" ColumnName="Veg_ID" />
+                <ScalarProperty Name="Form" ColumnName="Form" />
+                <ScalarProperty Name="Average_Retail_Price_Dollars" ColumnName="Average_Retail_Price_Dollars" />
+                <ScalarProperty Name="Price_Unit" ColumnName="Price_Unit" />
+                <ScalarProperty Name="Preparation_yield_Factor" ColumnName="Preparation_yield_Factor" />
+                <ScalarProperty Name="Size_Cup_Equivalent" ColumnName="Size_Cup_Equivalent" />
+                <ScalarProperty Name="Size_Unit" ColumnName="Size_Unit" />
+                <ScalarProperty Name="Average_Price_Per_Cup_Dollars" ColumnName="Average_Price_Per_Cup_Dollars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Potatoes">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Potato">
+              <MappingFragment StoreEntitySet="Potato">
+                <ScalarProperty Name="Form_ID" ColumnName="Form_ID" />
+                <ScalarProperty Name="Veg_ID" ColumnName="Veg_ID" />
+                <ScalarProperty Name="Form" ColumnName="Form" />
+                <ScalarProperty Name="Average_Retail_Price_Dollars" ColumnName="Average_Retail_Price_Dollars" />
+                <ScalarProperty Name="Price_Unit" ColumnName="Price_Unit" />
+                <ScalarProperty Name="Preparation_yield_Factor" ColumnName="Preparation_yield_Factor" />
+                <ScalarProperty Name="Size_Cup_Equivalent" ColumnName="Size_Cup_Equivalent" />
+                <ScalarProperty Name="Size_Unit" ColumnName="Size_Unit" />
+                <ScalarProperty Name="Average_Price_Per_Cup_Dollars" ColumnName="Average_Price_Per_Cup_Dollars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tomatoes">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Tomato">
+              <MappingFragment StoreEntitySet="Tomato">
+                <ScalarProperty Name="Form_ID" ColumnName="Form_ID" />
+                <ScalarProperty Name="Veg_ID" ColumnName="Veg_ID" />
+                <ScalarProperty Name="Form" ColumnName="Form" />
+                <ScalarProperty Name="Average_Retail_Price_Dollars" ColumnName="Average_Retail_Price_Dollars" />
+                <ScalarProperty Name="Price_Unit" ColumnName="Price_Unit" />
+                <ScalarProperty Name="Preparation_yield_Factor" ColumnName="Preparation_yield_Factor" />
+                <ScalarProperty Name="Size_Cup_Equivalent" ColumnName="Size_Cup_Equivalent" />
+                <ScalarProperty Name="Size_Unit" ColumnName="Size_Unit" />
+                <ScalarProperty Name="Average_Price_Per_Cup_Dollars" ColumnName="Average_Price_Per_Cup_Dollars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vegetables">
+            <EntityTypeMapping TypeName="Agriculture_DatabaseModel.Vegetable">
+              <MappingFragment StoreEntitySet="Vegetables">
+                <ScalarProperty Name="Veg_ID" ColumnName="Veg_ID" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Veg_Name" ColumnName="Veg_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6e9b58fc02a24239abac39d4fa98daef" Name="Diagram1">
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Agri_Products" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Apple" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Apricot" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Blueberry" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Fruit" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Mushroom" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Potato" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Tomato" Width="1.5" PointX="5.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agriculture_DatabaseModel.Vegetable" Width="1.5" PointX="3" PointY="17" IsExpanded="true" />
+        <AssociationConnector Association="Agriculture_DatabaseModel.FK_dbo_Fruits_dbo_Agri_Products_Product_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="Agriculture_DatabaseModel.FK_dbo_Vegetables_dbo_Agri_Products_Product_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="Agriculture_DatabaseModel.FK_dbo_Apple_dbo_Fruits_Fruit_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="Agriculture_DatabaseModel.FK_dbo_Apricot_dbo_Fruits_Fruit_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="Agriculture_DatabaseModel.FK_dbo_Blueberry_dbo_Fruits_Fruit_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="Agriculture_DatabaseModel.FK_dbo_Mushroom_dbo_Vegetables_Veg_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="Agriculture_DatabaseModel.FK_dbo_Potato_dbo_Vegetables_Veg_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="Agriculture_DatabaseModel.FK_dbo_tomato_dbo_Vegetables_Veg_ID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

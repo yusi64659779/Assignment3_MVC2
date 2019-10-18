@@ -1,0 +1,82 @@
+﻿@model Assignment3_MVC2.Models.Apple
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Apple</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Form)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Form)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Average_Retail_Price_Dollars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Average_Retail_Price_Dollars)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price_Unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price_Unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preparation_yield_Factor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preparation_yield_Factor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size_Cup_Equivalent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size_Cup_Equivalent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size_Unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size_Unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Average_Price_Per_Cup_Dollars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Average_Price_Per_Cup_Dollars)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fruit.Fruit_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fruit.Fruit_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Form_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
